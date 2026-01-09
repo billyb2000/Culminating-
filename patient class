@@ -1,0 +1,89 @@
+public class Patient {
+
+    private String firstName;
+    private String lastName;
+    private String address;        // include postal code
+    private String reasonForVisit; // disease / reason
+    private int waitingTime;       // minutes
+    private int severityLevel;     // 1-5
+    private int meetingTime;       // minutes with doctor
+
+    public Patient(String firstName, String lastName,
+            String address, String reasonForVisit,
+            int waitingTime, int severityLevel, int meetingTime) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.reasonForVisit = reasonForVisit;
+        this.waitingTime = waitingTime;
+        this.severityLevel = severityLevel;
+        this.meetingTime = meetingTime;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getReasonForVisit() {
+        return reasonForVisit;
+    }
+
+    public int getWaitingTime() {
+        return waitingTime;
+    }
+
+    public int getSeverityLevel() {
+        return severityLevel;
+    }
+
+    public int getMeetingTime() {
+        return meetingTime;
+    }
+
+    public void setFirstName(String s) {
+        this.firstName = s;
+    }
+
+    public void setLastName(String s) {
+        this.lastName = s;
+    }
+
+    public void setAddress(String s) {
+        this.address = s;
+    }
+
+    public void setReasonForVisit(String s) {
+        this.reasonForVisit = s;
+    }
+
+    public void setWaitingTime(int t) {
+        this.waitingTime = t;
+    }
+
+    public void setSeverityLevel(int t) {
+        this.severityLevel = t;
+    }
+
+    public void setMeetingTime(int t) {
+        this.meetingTime = t;
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName
+                + " | Address: " + address
+                + " | Reason: " + reasonForVisit
+                + " | Waiting: " + waitingTime + " min"
+                + " | Severity: " + severityLevel
+                + " | Meeting: " + meetingTime + " min";
+    }
+}
